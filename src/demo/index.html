@@ -1,0 +1,147 @@
+
+<!doctype html>
+<html>
+<head>
+
+	<script type="text/javascript">var _kmq = _kmq || [];
+	var _kmk = _kmk || '0cc9429bb625131fe67f8dec2a1154975c4261dd';
+	function _kms(u){
+	  setTimeout(function(){
+	    var d = document, f = d.getElementsByTagName('script')[0],
+	    s = d.createElement('script');
+	    s.type = 'text/javascript'; s.async = true; s.src = u;
+	    f.parentNode.insertBefore(s, f);
+	  }, 1);
+	}
+	_kms('//i.kissmetrics.com/i.js');
+	_kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+
+
+	</script>
+
+
+	<meta charset="utf-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Castro: No-Nonsense Screencasting for the Mac</title>
+	<meta name="description" content="Castro: No-Nonsense Screencasting for the Mac" />
+	<meta name="keywords" content="" />
+
+	<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+
+	<!-- Facebook Metadata /-->
+	<meta property="fb:page_id" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:description" content=""/>
+	<meta property="og:title" content=""/>
+
+	<!-- Google+ Metadata /-->
+	<meta itemprop="name" content="">
+	<meta itemprop="description" content="">
+	<meta itemprop="image" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+
+	<link rel="stylesheet" href="/videoplayer/mediaelementplayer.min.css" />
+
+
+		<style>
+	.postroll {
+		padding: 5%;
+		color: #fff;
+	}
+
+	
+
+	</style>
+</head>
+
+<body style="background-color: #000">
+<img src="/img/background_video.png" width="1" height="1">
+
+			<center>
+
+			<div style="width: 100%;">
+				
+			<video id="video-player" poster="video.jpg" controls="controls" preload="metadata" style="background-color: #000; padding-top: 0; height: 100%">
+			    <!-- MP4 for Safari, IE9, iPhone, iPad, Android, and Windows Phone 7 -->
+			    <source type="video/mp4" src="video.mp4" />
+			    <!-- WebM/VP8 for Firefox4, Opera, and Chrome -->
+			    <source type="video/webm" src="video.webm" />
+			    <!-- Ogg/Vorbis for older Firefox and Opera versions -->
+			    <source type="video/ogg" src="video.ogv" />
+			    <!-- Optional: Add chapters -->
+			    <object width="320" height="240" type="application/x-shockwave-flash" data="flashmediaelement.swf">
+			        <param name="movie" value="flashmediaelement.swf" />
+			        <param name="flashvars" value="controls=true&file=video.mp4" />
+			        <!-- Image as a last resort -->
+			        <img src="video.jpg" width="320" height="240" title="No video playback capabilities" />
+			    </object>
+			    <link rel="postroll" href="postroll.html" />
+
+			</video>
+
+
+			<p><h1><a href="castro://asdsdf">Reply To This Video</a></h1></p>
+
+			</div>
+
+
+		</center>
+
+
+
+
+	
+	<script src="/js/libs/jquery-2.0.2.min.js"></script>
+
+	<script src="/videoplayer/mediaelement-and-player.min.js"></script>
+
+	<script>
+	$('audio,video').mediaelementplayer({
+		features: ['playpause','progress','volume','postroll', 'fullscreen']
+	});
+	</script>
+
+	<script>
+		// Resize video
+		$(document).ready(function(){
+		        var video = $("#video-player");
+		        var windowObj = $(window);
+		 
+		        function onResizeWindow() {
+		            resizeVideo(video[0]);
+		        }
+		 
+		        function onLoadMetaData(e) {
+		            resizeVideo(e.target);
+		        }
+		 
+		        function resizeVideo(videoObject) {
+		        	//console.log(windowObj.height() / windowObj.width());
+		        	//if (0.6 > windowObj.height() / windowObj.width()) {
+			            var percentWidth = videoObject.clientWidth * 100 / videoObject.videoWidth;
+			            var videoHeight = videoObject.videoHeight * percentWidth / 100;
+			            video.height(videoHeight);
+		        	//}
+		        }
+		 
+
+		        video.on("loadedmetadata", onLoadMetaData);
+		        windowObj.resize(onResizeWindow);
+		    }
+		);
+
+	_kmq.push(['trackClick', '.cta', 'AppIsDownloaded']);
+
+		// Resize Typography ???
+ 
+
+	</script>
+
+
+
+  </body>
+</html>

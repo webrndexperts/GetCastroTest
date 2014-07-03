@@ -1,0 +1,99 @@
+<style>
+
+.site-header {
+    height: 100%;
+    background-color: #404040;
+    background-image: url("/img/background_video.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 150px 0;
+}
+
+.site-header h1 {
+    color: #fff;
+    font-size: 75px;
+    font-family: 'Pacifico', 'Open Sans', Helvetica, Arial, sans-serif;
+    padding-bottom: 60px;
+    text-shadow: 1px 2px 1px rgba #2f7440, 0.7;
+}
+
+.site-header h2 {
+    color: #fff;
+}
+
+.site-header .bordered-button {
+    margin-top: 60px;
+}
+
+.site-header-black {
+    background-color: #000;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 150px 0;
+}
+
+.site-header-black h1 {
+    color: #fff;
+    font-size: 75px;
+    font-family: 'Pacifico', 'Open Sans', Helvetica, Arial, sans-serif;
+    padding-bottom: 60px;
+    text-shadow: 1px 2px 1px rgba #2f7440, 0.7;
+}
+
+.site-header-black h2 {
+    color: #fff;
+}
+
+.site-header-black .bordered-button {
+    margin-top: 60px;
+}
+
+.bordered-button {
+    display: inline-block;
+    text-align: center;
+    padding: 15px 45px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    border: 3px solid #fff;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.bordered-button:hover {
+    color: #fff;
+    border-color: #1a1e23;
+    background-color: #1a1e23;
+}
+
+</style>
+
+<a href="javascript:download()" class="cta">
+<div class="postroll site-header" onclick="javascript:download()">
+
+	
+</div>
+</a>
+
+<script>
+        function download() {
+
+                    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                        window.location.href= "mailto:?subject=Castro Download Link&body=http://www.getcastro.tv/downloads/Castro.dmg";
+                    } else {
+                        window.location.href= "http://www.getcastro.tv/downloads/Castro.dmg";
+                    }
+        }
+
+
+    </script>
